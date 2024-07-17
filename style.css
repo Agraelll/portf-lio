@@ -1,0 +1,374 @@
+/* Geral */
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .roboto-thin {
+        font-family: "Roboto", sans-serif;
+      }
+      
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00FF08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color:#00FF08;
+}
+
+/* CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #464646;
+    text-decoration: none;
+    display: inline-block;
+    transition: .25s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #00FF08;
+    transform: scale(1.05);
+}
+
+/* Topo do site */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span{
+    color: #00FF08
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+    
+}
+
+/* Estilo da aba especialidades */
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between; /* Distribui os elementos uniformemente */
+}
+
+.especialidades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    width: calc(33.33% - 50px); /* Faz cada quadro ocupar cerca de 33.33% da largura, menos o espaço entre eles */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+@media (max-width: 1024px) {
+    .especialidades .especialidades-box {
+        width: calc(50% - 50px); /* Se a tela for menor que 1024px, exibe 2 por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .especialidades .especialidades-box {
+        width: calc(50% - 30px); /* Se a tela for menor que 768px, exibe 2 por linha com um espaço menor */
+    }
+}
+
+@media (max-width: 480px) {
+    .especialidades .especialidades-box {
+        width: 100%; /* Em telas menores que 480px, exibe 1 por linha */
+    }
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff78;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: #00FF08;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Sobre */
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #00FF08;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #00FF08;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 7px;
+    transition: .2s;
+}
+
+/* PORTFÓLIO */
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 7s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00FF08;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 60px 4%;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #00FF08;
+}
+
+footer .line-footer p i{
+    color: #00FF08;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+}
+
+@media screen and (max-width: 1020px){
+    /* Classe Geral */
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    /* Cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* Topo do Site */
+    scale: .topo-do-site .flex{
+        gap: 40px;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /* Especialidades */
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    /* Sobre */
+    .sobre .txt-sobre h2{
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* Portfólio */
+    section.portfolio{
+        padding: 80px 8%;
+    }
+
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex{
+        gap: 60px;
+    }
+
+    /* Rodapé */
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+}
